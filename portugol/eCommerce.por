@@ -35,7 +35,7 @@ programa{
 		escreva("----------------------------------------------------------------------------------------------------------\n")
 		escreva("COD\t\tPRODUTO\t\t\t\tVALOR R$\t\tESTOQUE\n")
 		escreva("----------------------------------------------------------------------------------------------------------\n")
-		//para tem a função de varrer os vetores e exibir o catalogo 
+	
 		para (x=0;x<10; x++){
 			escreva(codigo[x],"\t\t",produto[x],"\t\t\t",valor[x],"\t\t\t",estoque[x],"\n")
 		}
@@ -134,7 +134,7 @@ programa{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2174; 
+ * @POSICAO-CURSOR = 1818; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
