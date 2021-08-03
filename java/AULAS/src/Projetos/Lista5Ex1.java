@@ -1,19 +1,18 @@
 package Projetos;
 
 import java.util.Scanner;
-
-public class Tarefa1 {
+public class Lista5Ex1 {
 
 	public static void main(String[] args) {
-		Scanner ler = new Scanner(System.in);
+		Scanner leia = new Scanner(System.in);
 		int anos,meses,dias,idade;
 		
 		System.out.println("Digite sua idade em anos: ");
-		anos = ler.nextInt();
+		anos = leia.nextInt();
 		System.out.println("Meses remanescentes: ");
-		meses = ler.nextInt();
+		meses = leia.nextInt();
 		System.out.println("Dias remanescentes: ");
-		dias = ler.nextInt();
+		dias = leia.nextInt();
 		
 		anos = anos*365;
 		meses = meses*30;
