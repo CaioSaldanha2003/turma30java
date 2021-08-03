@@ -1,4 +1,4 @@
-package Projetos;
+package projetosIndividuais;
 
 import java.util.Scanner;
 public class Lista5Ex1 {
