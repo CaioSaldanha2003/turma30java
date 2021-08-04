@@ -1,7 +1,7 @@
 package projetosIndividuais;
 
 import java.util.Scanner;
-public class Lista5Ex1 {
+public class Lista1Ex1 {
 
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);

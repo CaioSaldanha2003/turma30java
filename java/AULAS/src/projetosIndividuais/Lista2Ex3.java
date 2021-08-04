@@ -1,7 +1,7 @@
 package projetosIndividuais;
 
 import java.util.Scanner;
-public class Lista6Ex3 {
+public class Lista2Ex3 {
 	public static void main(String[] args) {;
 	Scanner leia = new Scanner(System.in);
 		int idade;
