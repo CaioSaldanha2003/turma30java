@@ -1,8 +1,7 @@
-package projetosIndividuais;
+package lista1;
 
 import java.util.Scanner;
-public class Lista1Ex1 {
-
+public class lista1Ex1 {
 	public static void main(String[] args) {
 		Scanner leia = new Scanner(System.in);
 		int anos,meses,dias,idade;
@@ -21,5 +20,5 @@ public class Lista1Ex1 {
 		System.out.println("Oi!!! Sua idade em dias é "+idade+".");
 
 	}
-
+	
 }
