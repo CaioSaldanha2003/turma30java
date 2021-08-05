@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class LacoEnquanto {
+public class lacoEnquanto {
 	public static void main(String[] args) {
 
 		Scanner leia = new Scanner(System.in);
