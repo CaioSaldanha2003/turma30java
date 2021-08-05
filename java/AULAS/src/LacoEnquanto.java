@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class LacoEnquanto {
 	public static void main(String[] args) {
 
-		Scanner leia = new Scanner(System.in);  //instan criar...
+		Scanner leia = new Scanner(System.in);
 		String nome;
 		int salario;
 		int maiorSalario=0;
@@ -11,7 +11,7 @@ public class LacoEnquanto {
 		char op;
 		
 		 do {
-			 leia.nextLine(); //limpa o buffer de teclado
+			 leia.nextLine();
 			 if (contador>1) {
 			 System.out.println("Continua S/N: ");
 				op = leia.next().toUpperCase().charAt(0);
@@ -48,5 +48,4 @@ public class LacoEnquanto {
 		}
 		System.out.println();
 	}
-
 }
