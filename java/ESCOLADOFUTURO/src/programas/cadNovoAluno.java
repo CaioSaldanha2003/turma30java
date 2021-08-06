@@ -16,8 +16,8 @@ public class cadNovoAluno {
 		exemplo2.nota = 10;
 		exemplo2.anoNascimento = 1978;
 		
-		exemplo1.mostraIdade(2059);
-		exemplo2.mostraIdade(2059);
+		exemplo1.mostraIdade(2021);
+		exemplo2.mostraIdade(2021);
 
 	}
 
