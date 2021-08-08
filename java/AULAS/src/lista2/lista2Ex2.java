@@ -6,7 +6,7 @@ public class lista2Ex2 {
 		Scanner leia = new Scanner(System.in);
 			int a, b , c;
 			
-				System.out.println("Informe três números, mas não repita nenhum deles");
+				System.out.println("Informe três números, mas não repita nenhum deles.");
 					System.out.println("A: ");
 						a = leia.nextInt();
 							System.out.println("B: ");
