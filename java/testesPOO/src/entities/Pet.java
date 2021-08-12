@@ -1,6 +1,6 @@
 package entities;
 
-public class Pet implements sonsAnimais {
+public abstract class Pet implements sonsAnimais {
 	private String raca;
 	private int anoNasci;
 	
