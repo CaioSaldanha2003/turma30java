@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import classesEcommerce.Dados;
 
-public class pastelDoBomPOO {
+public class pastelariaPOO {
 	public static void main(String args[]) {
 		Scanner ler = new Scanner (System.in);
 		char op = 0;
@@ -38,9 +38,9 @@ public class pastelDoBomPOO {
 			System.out.print("\nDigite o código do sabor desejado: ");
 			String codSab = ler.next();
 			
-			for(Dados y : lista) {
-				while (codSab.equals(y.getCod())) {
-					System.out.printf("\nEntão você quer um pastel do sabor: %s não é mesmo?",y.getSab());
+			for(int y = 0; y < lista.size(); y++) {
+				while (codSab.equals(lista.get(y).getCod())) {
+					System.out.printf("\nEntão você quer um pastel do sabor: %s não é mesmo?",lista.get(y).getSab());
 				}
 			}	
 			System.out.println("Não temos um sabor com esse código, portanto tente novamente...");	
