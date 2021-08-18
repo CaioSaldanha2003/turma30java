@@ -28,6 +28,7 @@ public class pastelariaPOO {
 			System.out.println("\t       |     CARDÁPIO     |");
 			System.out.println("\t\t------------------");
 			System.out.println("\nCÓDIGOS\t SABORES\t  PREÇOS\tESTOQUE");
+			
 			for(int x = 0; x < lista.size(); x++) {
 			System.out.print(lista.get(x).getCod()+"\t ");
 			System.out.print(lista.get(x).getSab()+"\t  R$ ");
@@ -38,12 +39,14 @@ public class pastelariaPOO {
 			System.out.print("\nDigite o código do sabor desejado: ");
 			String codSab = ler.next();
 			
-			for(int y = 0; y < lista.size(); y++) {
-				while (codSab.equals(lista.get(y).getCod())) {
-					System.out.printf("\nEntão você quer um pastel do sabor: %s não é mesmo?",lista.get(y).getSab());
-				}
-			}	
-			System.out.println("Não temos um sabor com esse código, portanto tente novamente...");	
+			for(Dados y : lista) {
+				if(codSab.equals(y.getCod())) {
+					System.out.printf("\nEntão você quer um pastel do sabor: %s não é mesmo? \u00BB S/N \u00AB",y.getSab());
+						System.out.print("\nOpção: "); op = ler.next().charAt(0);
+							}
+						}	
+			System.out.println("Não temos um sabor com esse código, portanto tente novamente...");
+			
 			} else if (op == 'n' || op == 'N') {
 			System.out.println("\nQue pena, volte sempre!!!");
 			
