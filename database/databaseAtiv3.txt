@@ -1,0 +1,22 @@
+create database db_ativ3;
+
+create table tb_alunos(
+	ra bigInt (4) auto_increment,
+    Nome varchar (20) not null,
+    Idade int (2) not null,
+    Genero char,
+    notaFinal decimal (3,2),
+    primary key (ra)
+);
+
+insert into tb_alunos (Nome, Idade, Genero, notaFinal) Values ("Fran", 16, 'F', 8.5);
+insert into tb_alunos (Nome, Idade, Genero, notaFinal) Values ("Giovanna", 15, 'F', 8.0);
+insert into tb_alunos (Nome, Idade, Genero, notaFinal) Values ("Nicolas", 17, 'M', 7.5);
+insert into tb_alunos (Nome, Idade, Genero, notaFinal) Values ("Lays", 17, 'F', 9.0);
+insert into tb_alunos (Nome, Idade, Genero, notaFinal) Values ("Cleiton", 18, 'M', 6.5);
+insert into tb_alunos (Nome, Idade, Genero, notaFinal) Values ("Erick", 18, 'M', 6.0);
+insert into tb_alunos (Nome, Idade, Genero, notaFinal) Values ("Larissa", 18, 'F', 8.9);
+insert into tb_alunos (Nome, Idade, Genero, notaFinal) Values ("Robson", 17, 'F', 5.5);
+
+select * from tb_alunos where notaFinal > 7.0
+select * from tb_alunos where notaFinal < 7.0

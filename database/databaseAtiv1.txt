@@ -1,0 +1,18 @@
+create database db_ativ1;
+
+create table tb_funcionarios(
+    re bigint (6) auto_increment,
+    nome varchar (20) not null,
+    funcao varchar (10),
+    admissao date,
+    salario int,
+    primary key (re)
+);
+
+insert into tb_funcionarios(nome, funcao, admissao, salario) Values ("Geraldo", "Gerente", "2008-09-23", 5000);
+insert into tb_funcionarios(nome, funcao, admissao, salario) Values ("Rogério", "Analista", "2010-07-30", 4350);
+insert into tb_funcionarios(nome, funcao, admissao, salario) Values ("Cleiton", "Consultor", "2016-02-01", 3040);
+insert into tb_funcionarios(nome, funcao, admissao, salario) Values ("Júlio", "Assistente", "2017-05-10", 1980);
+insert into tb_funcionarios(nome, funcao, admissao, salario) Values ("Caio", "Estagiário", "2020-01-21", 1300);
+
+select * from tb_funcionarios where salario > 2000

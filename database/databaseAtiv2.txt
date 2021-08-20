@@ -1,0 +1,22 @@
+create database db_ativ2;
+
+create table tb_produtos(
+	ISBN bigInt (13) auto_increment,
+    Nome varchar (20) not null,
+    Editora varchar (20),
+    Autor varchar (20) not null,
+    Preço decimal(4, 2),
+    primary key (ISBN)
+);
+
+insert into tb_produtos(Nome, Editora, Autor, Preço) Values ("Maus",  "Quadrinhos na Cia", "Art Spiegelman", 34.90);
+insert into tb_produtos(Nome, Editora, Autor, Preço) Values ("Harry Potter",  "Bloomsbury", "J.K. Rowling", 24.89);
+insert into tb_produtos(Nome, Editora, Autor, Preço) Values ("Revolução dos Bichos",  "Comp. das Letras", "George Orwell", 10.90);
+insert into tb_produtos(Nome, Editora, Autor, Preço) Values ("A Arte da Guerra",  "Jard. dos Livros", "Sun Tzu", 18.31);
+insert into tb_produtos(Nome, Editora, Autor, Preço) Values ("Centro da Terra",  "Principis", "Júlio Verne", 10.08);
+insert into tb_produtos(Nome, Editora, Autor, Preço) Values ("It A Coisa",  "Suma", "Stephen King", 48.90);
+insert into tb_produtos(Nome, Editora, Autor, Preço) Values ("O Ladrão de Raios",  "Casa das Letras", "Rick Riordan", 21.90);
+insert into tb_produtos(Nome, Editora, Autor, Preço) Values ("O Pequeno Príncipe",  "HarperCollins", "Antoine Exupéry", 10.90);
+
+select * from tb_produtos where Preço > 500
+select * from tb_produtos where Preço < 500
