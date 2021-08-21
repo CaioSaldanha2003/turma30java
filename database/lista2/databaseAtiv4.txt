@@ -1,1 +1,51 @@
-vhjgykguk
+create database db_generation_game_online;
+
+create table tb_classe(
+	id bigint (10) auto_increment,
+    classe varchar (10) not null,
+    hab varchar (10) not null,
+    primary key (id)
+);
+
+create table tb_personagem(
+	id bigint (10) auto_increment,
+	nome varchar (10) not null,
+    pontosatk int (4),
+    pontosdef int (4),
+    classe_id bigint not null,
+    
+    primary key (id),
+    foreign key (classe_id) references tb_classe (id)
+);
+
+insert into tb_classe (classe, hab) Values ("Mago", "Feitiço");
+insert into tb_classe (classe, hab) Values ("Guerreiro", "Armadura");
+insert into tb_classe (classe, hab) Values ("Bardo", "Música");
+insert into tb_classe (classe, hab) Values ("Ladino", "Roubo");
+insert into tb_classe (classe, hab) Values ("Curandeiro", "Cura");
+
+insert into tb_personagem (nome, pontosatk, pontosdef, classe_id) Values ("Spectrum", 2195, 2410, 1);
+insert into tb_personagem (nome, pontosatk, pontosdef, classe_id) Values ("Claymont", 1800, 1900, 1);
+insert into tb_personagem (nome, pontosatk, pontosdef, classe_id) Values ("Leodor", 3890, 2600, 3);
+insert into tb_personagem (nome, pontosatk, pontosdef, classe_id) Values ("Giselle", 1480, 1350, 5);
+insert into tb_personagem (nome, pontosatk, pontosdef, classe_id) Values ("Thomas", 3440, 200, 1);
+insert into tb_personagem (nome, pontosatk, pontosdef, classe_id) Values ("Raveneye", 2250, 2040, 4);
+insert into tb_personagem (nome, pontosatk, pontosdef, classe_id) Values ("Gardner", 1950, 3080, 3);
+insert into tb_personagem (nome, pontosatk, pontosdef, classe_id) Values ("Skaldr", 4200, 3320, 2);
+
+select * from tb_personagem where pontosatk > 2000
+
+select * from tb_personagem 
+where pontosdef >= 1000
+and pontosdef <= 2000
+
+select * from tb_personagem 
+where nome like "%c%"
+
+select * from tb_personagem 
+inner join tb_classe on tb_classe.id = tb_personagem.classe_id
+
+select tb_personagem.id, tb_personagem.nome, tb_personagem.pontosatk, tb_personagem.pontosdef, tb_classe.classe, tb_classe.hab
+from tb_personagem 
+inner join tb_classe on tb_classe.id = tb_personagem.classe_id
+where classe = "Bardo"

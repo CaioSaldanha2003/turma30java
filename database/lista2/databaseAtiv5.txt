@@ -1,1 +1,53 @@
-hjkhjvjk
+create database db_pizzaria_legal;
+
+create table tb_categoria(
+	id bigint (10) auto_increment,
+    sabor varchar (10) not null,
+    preco decimal (10,2) not null,
+    primary key (id)
+);
+
+insert into tb_categoria (sabor, preco) Values ("Calabresa", 30);
+insert into tb_categoria (sabor, preco) Values ("Mussarela", 28);
+insert into tb_categoria (sabor, preco) Values ("Portuguesa", 50);
+insert into tb_categoria (sabor, preco) Values ("Marguerita", 45);
+insert into tb_categoria (sabor, preco) Values ("Toscana", 29);
+
+create table tb_pizza(
+	id bigint (10) auto_increment,
+    pizza varchar (10) not null,
+    estoque int (10),
+    disp boolean,
+    categoria_id bigint not null,
+    
+    primary key (id),
+    foreign key (categoria_id) references tb_categoria (id)
+);
+
+insert into tb_pizza (pizza, estoque, disp, categoria_id) Values ("Pizza1", 4, true, 1);
+insert into tb_pizza (pizza, estoque, disp, categoria_id) Values ("Pizza2", 7, true, 2);
+insert into tb_pizza (pizza, estoque, disp, categoria_id) Values ("Pizza3", 8, true, 3);
+insert into tb_pizza (pizza, estoque, disp, categoria_id) Values ("Pizza4", 6, true, 4);
+insert into tb_pizza (pizza, estoque, disp, categoria_id) Values ("Pizza5", 0, false, 5);
+insert into tb_pizza (pizza, estoque, disp, categoria_id) Values ("Pizza6", 3, true, 4);
+insert into tb_pizza (pizza, estoque, disp, categoria_id) Values ("Pizza7", 5, true, 5);
+insert into tb_pizza (pizza, estoque, disp, categoria_id) Values ("Pizza8", 8, true, 2);
+
+select * from tb_categoria
+where preco > 45
+
+select * from tb_categoria
+where preco >= 29
+and preco <= 60
+
+select sabor from tb_categoria
+where sabor like "%C%"
+
+select tb_pizza.id, tb_pizza.pizza, tb_pizza.estoque, tb_categoria.sabor, tb_categoria.preco 
+from tb_pizza
+inner join tb_categoria on tb_categoria.id = tb_pizza.categoria_id
+
+select tb_pizza.id, tb_pizza.pizza, tb_pizza.estoque, tb_categoria.sabor, tb_categoria.preco 
+from tb_pizza
+inner join tb_categoria on tb_categoria.id = tb_pizza.categoria_id
+where sabor = "Marguerita"
