@@ -1,0 +1,54 @@
+create database db_construindo_a_nossa_vida
+
+create table tb_categoria(
+	id bigint (10) auto_increment,
+    depart varchar (10) not null,
+    loja varchar (10) not null,
+    primary key (id)
+);
+
+insert into tb_categoria (depart, loja) Values ("Hidráulica", "TelhaNorte");
+insert into tb_categoria (depart, loja) Values ("Elétrica", "TelhaNorte");
+insert into tb_categoria (depart, loja) Values ("Segurança", "TelhaNorte");
+insert into tb_categoria (depart, loja) Values ("Iluminação", "TelhaNorte");
+insert into tb_categoria (depart, loja) Values ("Decoração", "TelhaNorte");
+
+create table tb_produto(
+	id bigint (10) auto_increment,
+    nome varchar (10) not null,
+    preco decimal (10, 2) not null,
+    disp boolean not null,
+    categoria_id bigint not null,
+    primary key (id),
+    foreign key (categoria_id) references tb_categoria(id)
+);
+
+insert into tb_produto (nome, preco, disp, categoria_id) Values ("PlafonLED", 52, false, 4);
+insert into tb_produto (nome, preco, disp, categoria_id) Values ("Tomada", 16, true, 2);
+insert into tb_produto (nome, preco, disp, categoria_id) Values ("Interfone", 90, true, 3);
+insert into tb_produto (nome, preco, disp, categoria_id) Values ("Lampada", 10, true, 4);
+insert into tb_produto (nome, preco, disp, categoria_id) Values ("CaixaAgua", 270, false, 1);
+insert into tb_produto (nome, preco, disp, categoria_id) Values ("CaboFlex", 205, true, 2);
+insert into tb_produto (nome, preco, disp, categoria_id) Values ("Ralo", 30, true, 1);
+insert into tb_produto (nome, preco, disp, categoria_id) Values ("Wallpaper", 300, false, 5);
+
+select tb_produto.id, tb_produto.nome, tb_produto.preco, tb_categoria.depart, tb_produto.disp, tb_categoria.loja
+from tb_produto
+inner join tb_categoria on tb_categoria.id = tb_produto.categoria_id
+where tb_produto.preco > 50
+
+select tb_produto.id, tb_produto.nome, tb_produto.preco, tb_categoria.depart, tb_produto.disp, tb_categoria.loja
+from tb_produto
+inner join tb_categoria on tb_categoria.id = tb_produto.categoria_id
+where tb_produto.preco >= 3
+and tb_produto.preco <= 60
+
+select tb_produto.id, tb_produto.nome, tb_produto.preco, tb_categoria.depart, tb_produto.disp, tb_categoria.loja
+from tb_produto
+inner join tb_categoria on tb_categoria.id = tb_produto.categoria_id
+where tb_produto.nome like "%C%"
+
+select tb_produto.id, tb_produto.nome, tb_produto.preco, tb_categoria.depart, tb_produto.disp, tb_categoria.loja
+from tb_produto
+inner join tb_categoria on tb_categoria.id = tb_produto.categoria_id
+where tb_categoria.depart = "Decoração"
