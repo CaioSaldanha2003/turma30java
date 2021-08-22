@@ -1,0 +1,55 @@
+create database db_farmacia_do_bem;
+
+create table tb_categoria(
+	id bigint (10) auto_increment,
+    tipo varchar (10) not null,
+    status boolean,
+    primary key (id)
+);
+
+insert into tb_categoria (tipo, ativo) Values ("Alopático", true);
+insert into tb_categoria (tipo, ativo) Values ("Fito.", false);
+insert into tb_categoria (tipo, ativo) Values ("Homeo.", true);
+insert into tb_categoria (tipo, ativo) Values ("Genérico", true);
+insert into tb_categoria (tipo, ativo) Values ("Similar", false);
+
+create table tb_produto(
+	id bigint (10) auto_increment,
+    nome varchar (10) not null,
+    preco decimal (10,2) not null,
+    prazoVal date not null,
+    categoria_id bigint not null,
+    primary key (id),
+    foreign key (categoria_id) references tb_categoria (id)
+);
+
+insert into tb_produto (nome, preco, prazoVal, categoria_id) Values ("Aconitum", 15, "2022-08-21", 3);
+insert into tb_produto (nome, preco, prazoVal, categoria_id) Values ("Bronqui.", 21, "2022-08-21", 2);
+insert into tb_produto (nome, preco, prazoVal, categoria_id) Values ("Dipirona", 4, "2022-08-21", 4);
+insert into tb_produto (nome, preco, prazoVal, categoria_id) Values ("Mino.", 55, "2022-08-21", 5);
+insert into tb_produto (nome, preco, prazoVal, categoria_id) Values ("Vonflux", 48, "2022-08-21", 1);
+insert into tb_produto (nome, preco, prazoVal, categoria_id) Values ("Imuno", 51, "2022-08-21", 2);
+insert into tb_produto (nome, preco, prazoVal, categoria_id) Values ("Ansio.", 65, "2022-08-21", 3);
+insert into tb_produto (nome, preco, prazoVal, categoria_id) Values ("Avena", 15, "2022-08-21", 3);
+
+select tb_produto.id, tb_produto.nome, tb_produto.preco, tb_produto.prazoVal, tb_categoria.tipo, tb_categoria.ativo 
+from tb_produto
+inner join tb_categoria on tb_categoria.id = tb_produto.categoria_id
+where tb_produto.preco > 50
+
+select tb_produto.id, tb_produto.nome, tb_produto.preco, tb_produto.prazoVal, tb_categoria.tipo, tb_categoria.ativo 
+from tb_produto
+inner join tb_categoria on tb_categoria.id = tb_produto.categoria_id
+where tb_produto.preco >= 3
+and tb_produto.preco <= 60
+
+select tb_produto.id, tb_produto.nome, tb_produto.preco, tb_produto.prazoVal, tb_categoria.tipo, tb_categoria.ativo 
+from tb_produto
+inner join tb_categoria on tb_categoria.id = tb_produto.categoria_id
+where nome like "%B%"
+
+select tb_produto.id, tb_produto.nome, tb_produto.preco, tb_produto.prazoVal, tb_categoria.tipo, tb_categoria.ativo 
+from tb_produto
+inner join tb_categoria on tb_categoria.id = tb_produto.categoria_id
+where tb_categoria.tipo = "Homeo."
+
