@@ -5,10 +5,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/ativ1")
 public class ativ1Controller {
 	
-	@GetMapping
+	@GetMapping("/acesse1")
 	public String ativ1() {
 		return "Usei persistência e atenção aos detalhes";
 	}
