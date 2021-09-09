@@ -46,10 +46,21 @@ public class pastelariaPOO {
 							y.getSab());
 					System.out.print("\nOpção: ");
 					op = ler.next().charAt(0);
+					
+					if(op == 's' || op == 'S') {
+						System.out.println("Teste");
+						
+					} else if (op == 'n' || op == 'N') {
+						System.out.println("\nQue pena, volte sempre!!!");
+					} else {
+						System.out.println("\nOpção inválida bro, tente de novo...");
+					}
+					
+				} else {
+					System.out.println("Não possuímos um sabor com esse código, tente novamente...");
 				}
 			}
-			System.out.println("Não temos um sabor com esse código, portanto tente novamente...");
-
+			
 		} else if (op == 'n' || op == 'N') {
 			System.out.println("\nQue pena, volte sempre!!!");
 

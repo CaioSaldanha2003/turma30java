@@ -1,15 +1,17 @@
-package org.generation.blogPessoal.service;
+package com.exercicio.lojaGames.service;
 
 import java.nio.charset.Charset;
 import java.util.Optional;
-import org.apache.commons.codec.binary.Base64;
 
-import org.generation.blogPessoal.model.UserLogin;
-import org.generation.blogPessoal.model.Usuario;
-import org.generation.blogPessoal.repository.UsuarioRepository;
+import com.exercicio.lojaGames.model.UserLogin;
+
+import org.apache.commons.codec.binary.Base64;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import com.exercicio.lojaGames.model.Usuario;
+import com.exercicio.lojaGames.repository.UsuarioRepository;
 
 @Service
 public class UsuarioService {
@@ -17,7 +19,7 @@ public class UsuarioService {
 	@Autowired
 	private UsuarioRepository repository;
 	
-	public Optional<Usuario> CadastrarUsuario(Usuario usuario) {
+	public Optional<Object> CadastrarUsuario(Usuario usuario) {
 		Optional<Usuario> user = repository.findByUsuario(usuario.getUsuario());
 		if(user.isPresent()) {
 			return Optional.ofNullable(null);

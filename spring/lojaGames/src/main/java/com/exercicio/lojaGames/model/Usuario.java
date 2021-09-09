@@ -1,4 +1,4 @@
-package org.generation.blogPessoal.model;
+package com.exercicio.lojaGames.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,21 +15,19 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-
+	
 	@NotBlank
 	@Size(min = 2, max = 100)
 	private String nome;
-
+	
 	@NotBlank
 	@Size(min = 5, max = 100)
 	private String usuario;
-
+	
 	@NotBlank
 	@Size(min = 5, max = 100)
 	private String senha;
 	
-	
-
 	public long getId() {
 		return id;
 	}

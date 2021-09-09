@@ -22,6 +22,8 @@ public class Categoria {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
+	private boolean ativo;
+
 	@NotBlank
 	@Size(max = 20)
 	private String tipo;
@@ -41,8 +43,6 @@ public class Categoria {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-
-	private boolean ativo;
 
 	public long getId() {
 		return id;
