@@ -1,6 +1,7 @@
 package org.generation.blogPessoal.configuration;
 
 import java.util.ArrayList;
+
 import java.util.List;
 import org.springframework.context.annotation.Bean;
 
