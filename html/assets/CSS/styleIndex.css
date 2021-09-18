@@ -1,0 +1,40 @@
+/*ESTILOS DE index.html*/
+body{
+    background-color:rgba(0, 0, 0, 0.931);
+}
+h1{
+    color: blanchedalmond;
+    font-family: cursive;
+    text-align: center;
+}
+
+h2{
+    color: blanchedalmond;
+    font-family: cursive;
+    text-align: center;
+}
+
+h3{
+    color: blanchedalmond; 
+    font-family: cursive;
+    text-align: center;
+}
+p{
+    color: blanchedalmond;
+    font-family: cursive;
+    text-align: center;
+}
+
+label{
+    color: blanchedalmond;
+}
+.posicao{
+    text-align:center;
+}
+
+.container{
+    display: flex;
+    flex-flow:row;
+    justify-content: flex-start;
+    align-items: center;
+}

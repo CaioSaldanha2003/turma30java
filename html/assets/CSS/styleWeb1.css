@@ -1,0 +1,23 @@
+/*ESTILOS DE web1.html*/
+body{
+    background-color:springgreen;
+}
+.center{
+    text-align:center;
+}
+.center1{
+    text-align:start;
+}
+.center2{
+    text-align:end;
+}
+.fonte{
+    font-family: cursive;
+}
+
+.container{
+    display: flex;
+    flex-flow:row;
+    justify-content: flex-start;
+    align-items: center;
+}
