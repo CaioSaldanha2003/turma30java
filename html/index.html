@@ -52,28 +52,33 @@
     <br>
     <br>
 
-    <h3>Entre em contato comigo:</h3>
-
-    <div>
+    <div class = "container">
         <div>
-    <form>
-        <label for="nome">Nome:</label> <br>
-        <input type="text" id="nome" onkeyup = "validaNome()">
-        <div id = "txtNome"></div>
-        <br>
-        <br>
-        <label for="email">Email:</label> <br>
-        <input type="email" id="email" onkeyup = "validaEmail()">
-        <div id = "txtEmail"></div>
-        <br>
-        <br>
-        <label for="assunto">Assunto:</label> <br>
-        <textarea name="assunto" id="assunto" cols="40" rows="10" onkeyup = "validaAssunto()"></textarea>
-        <div id = "txtAssunto"></div>
-        <br>
-        <br>
-        <button onclick = "enviar()">Enviar</button>
+            <h3>Entre em contato comigo:</h3>
+        </div>
+    </div>
+
+    <div class = "container">
+        <div>
+            <form>
+            <label for="nome">Nome:</label> <br>
+            <input type="text" id="nome" onkeyup = "validaNome()">
+            <div id = "txtNome"></div>
+            <br>
+            <label for="email">Email:</label> <br>
+            <input type="email" id="email" onkeyup = "validaEmail()">
+            <div id = "txtEmail"></div>
+            <br>
+            <label for="assunto">Assunto:</label> <br>
+            <textarea name="assunto" id="assunto" cols="40" rows="10" onkeyup = "validaAssunto()"></textarea>
+            <div id = "txtAssunto"></div>
+            <br>
+            <button onclick = "enviar()">Enviar</button>
     </form>
+        </div>
+
+        <div>
+            <img src = "assets/img/original.gif" alt="">
         </div>
     </div>
 
