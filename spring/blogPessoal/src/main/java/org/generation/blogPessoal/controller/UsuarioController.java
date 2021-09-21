@@ -33,6 +33,4 @@ public class UsuarioController {
 		return usuarioService.CadastrarUsuario(usuario).map(resp -> ResponseEntity.ok(resp))
 				.orElse(ResponseEntity.status(HttpStatus.CONFLICT).build());
 	}
-
-	
 }

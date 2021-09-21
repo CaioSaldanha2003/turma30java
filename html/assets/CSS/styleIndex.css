@@ -1,40 +1,70 @@
 /*ESTILOS DE index.html*/
 body{
-    background-color:rgba(0, 0, 0, 0.931);
-}
-h1{
-    color: blanchedalmond;
-    font-family: cursive;
-    text-align: center;
+    background-color: black;
 }
 
-h2{
-    color: blanchedalmond;
+a{
+    color: greenyellow;
+    font-family: cursive;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+a:hover{
+    color: indigo;
+}
+
+h1{
+    color: greenyellow;
     font-family: cursive;
     text-align: center;
 }
 
 h3{
-    color: blanchedalmond; 
+    color: greenyellow; 
     font-family: cursive;
-    text-align: center;
+    text-align:left;
+    font-size: 15px;
 }
 p{
-    color: blanchedalmond;
+    color:rgb(228, 255, 187);
     font-family: cursive;
     text-align: center;
 }
 
 label{
-    color: blanchedalmond;
+    color: rgb(228, 255, 187);
+    font-family: cursive;
+}
+
+button{
+    font-family: cursive;
+}
+
+.menu li{
+    display: inline;
+    padding: 30px;
+}
+
+.borda{
+    border: greenyellow;
+    border-style:solid;
 }
 .posicao{
     text-align:center;
 }
 
 .container{
-    display: flex;
+    display:flex;
     flex-flow:row;
-    justify-content: flex-start;
+    justify-content:center;
     align-items: center;
+}
+
+.p-30{
+    padding: 30px;
+}
+
+.br-50{
+    border-radius: 50%;
 }

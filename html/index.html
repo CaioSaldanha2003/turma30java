@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/CSS/styleIndex.css">
 </head>
 <body>
-    <ul>
+    <ul class = "menu container">
         <li>
             <a href="index.html"> Home </a>
         </li>
@@ -16,12 +16,13 @@
             <a href="https://github.com/CaioSaldanha2003">Github</a>
         </li>
     </ul>
+
     <div class = "container">
         <div>
-            <img src="assets/img/Zx1W7feM_400x400.jpg" alt="minha fotinha">
+            <img class = "borda br-50" src="assets/img/Zx1W7feM_400x400.jpg" alt="minha fotinha">
         </div>
 
-        <div class = "posicao">
+        <div class = "p-30">
     <h1>Sobre Mim</h1>
     <p>- Caio Saldanha Motta</p>
     <p>- 18 anos</p>
@@ -34,33 +35,49 @@
     <br>
     <br>
 
-    <h1>Música favorita:</h1>
+    <div class = "container">
+        <div>
+            <h1>Minha música favorita:</h1>
+        </div>
+    </div>
 
     <br>
 
     <div class = "posicao">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/fJ9rUzIMcZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div>
+            <iframe class = "borda" width="560" height="315" src="https://www.youtube.com/embed/fJ9rUzIMcZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </div>
 
     <br>
     <br>
 
     <h3>Entre em contato comigo:</h3>
+
+    <div>
+        <div>
     <form>
         <label for="nome">Nome:</label> <br>
-        <input type="text" id="nome">
+        <input type="text" id="nome" onkeyup = "validaNome()">
+        <div id = "txtNome"></div>
         <br>
         <br>
         <label for="email">Email:</label> <br>
-        <input type="email" id="email">
+        <input type="email" id="email" onkeyup = "validaEmail()">
+        <div id = "txtEmail"></div>
         <br>
         <br>
         <label for="assunto">Assunto:</label> <br>
-        <textarea name="assunto" id="assunto" cols="40" rows="10"></textarea>
+        <textarea name="assunto" id="assunto" cols="40" rows="10" onkeyup = "validaAssunto()"></textarea>
+        <div id = "txtAssunto"></div>
         <br>
         <br>
-        <button>Enviar</button>
+        <button onclick = "enviar()">Enviar</button>
     </form>
+        </div>
+    </div>
+
+    <script src = "assets/js/script.js"></script>
 
 </body>
 </html>
